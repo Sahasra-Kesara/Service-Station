@@ -1,0 +1,44 @@
+﻿@model ServiceStation.Web.Models.VehicleService
+
+
+@*@{
+    Layout = "_layout2"; //change to designed layout at .shared/_layout2.schtml
+}
+*@
+
+@{
+    //casting ->
+    //var service = ViewData["Service"] as VehicleService; //This is used to ViewData Option
+}
+
+<h1>@ViewData["PageTitle"]</h1>
+
+<Table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @* ViewBag Style -> 
+            <td>@ViewBag.Service.Title</td>
+            <td>@ViewBag.Service.Description</td>
+            <td>@ViewBag.Service.Cost</td>
+            *@
+
+            @* ViewData Style ->
+            <td>@service.Title</td>
+            <td>@service.Description</td>
+            <td>@service.Cost</td>
+            *@
+
+            <td>@Model.Title</td>
+            <td>@Model.Description</td>
+            <td>@Model.Cost</td>
+
+        </tr>
+    </tbody>
+</Table>
